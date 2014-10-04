@@ -4,7 +4,7 @@
 #-----------------------------------------------------------------------
 #CONFIGURATION
 #Path to directory containing images
-DIR="/home/$USER"
+DIR="/home"
 #Interval to change wallpaper in minutes
 INTERVAL=1
 #-----------------------------------------------------------------------
