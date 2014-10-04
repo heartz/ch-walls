@@ -1,6 +1,6 @@
 #!/bin/bash
-# Script to randomly set Background from files in a directory
-CRON_SET=1
+# Script to randomly set background from files in a directory
+
 #-----------------------------------------------------------------------
 #CONFIGURATION
 #Path to directory containing images
