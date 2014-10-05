@@ -3,7 +3,8 @@
 
 #-----------------------------------------------------------------------
 #CONFIGURATION
-#Path to directory containing images
+#Path to directory containing the images
+#Do not use environment variables such as $HOME and $USER in the directory path
 DIR="/home"
 #Interval to change wallpaper in minutes
 INTERVAL=1
@@ -17,7 +18,9 @@ if [ "$1" = "stop" ]; then
 	sed -i '3s/.*//' $SCRIPT_DIR/$0
 	exit
 fi
-#Cron runs with limited environment variables apparently adn DBUS_SESSION_BUS_ADDRESS is needed for gsettings
+#Command To fix background settings for Gnome(White/Black screens issue)
+gsettings set org.gnome.settings-daemon.plugins.background active true
+#Cron runs with limited environment variables apparently and DBUS_SESSION_BUS_ADDRESS is needed for gsettings
 PID=$(pgrep gnome-session)
 export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-)
 
