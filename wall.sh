@@ -18,6 +18,8 @@ if [ "$1" = "stop" ]; then
 	sed -i '3s/.*//' $SCRIPT_DIR/$0
 	exit
 fi
+#Command To fix background settings for Gnome(White/Black screens issue)
+gsettings set org.gnome.settings-daemon.plugins.background active true
 #Cron runs with limited environment variables apparently and DBUS_SESSION_BUS_ADDRESS is needed for gsettings
 PID=$(pgrep gnome-session)
 export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-)
