@@ -12,7 +12,7 @@ Run the script with
 
 ```$sh wall.sh```
 
-The script runs automatically on start up once started.
+The script runs as a cron job, so no need to add to startup.
 
 To stop the switching, run
 
@@ -21,7 +21,10 @@ To stop the switching, run
 
 Possible Bug fix : If the wallpaper is changing but showing wrong Wallpaper
 run
+
 ```$gsettings set org.gnome.desktop.background show-desktop-icons true```
+
+
 This is show correct background wallpaper.
 
 This will fix it
