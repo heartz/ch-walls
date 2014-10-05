@@ -4,6 +4,7 @@
 #-----------------------------------------------------------------------
 #CONFIGURATION
 #Path to directory containing images
+#Do not use environment variables such as $HOME and $USER in the directory path
 DIR="/home"
 #Interval to change wallpaper in minutes
 INTERVAL=1
