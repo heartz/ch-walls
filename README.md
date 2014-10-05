@@ -19,12 +19,10 @@ To stop the switching, run
 ```$sh wall.sh stop```
 
 
-Possible Bug fix : If the wallpaper is changing but showing wrong Wallpaper
+Possible Bug fix : If the wallpaper is changing but showing wrong Wallpaper,
 run
 
 ```$gsettings set org.gnome.desktop.background show-desktop-icons true```
 
 
-This is show correct background wallpaper.
-
-This will fix it
+This will show correct background wallpaper.
